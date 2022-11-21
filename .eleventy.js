@@ -36,6 +36,11 @@ const imageShortcode = (src, alt, cls, sizes = defaultSizes, widths = [300, 600,
 module.exports = function(eleventyConfig) { 
     eleventyConfig.addPassthroughCopy("src/img");
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
+    eleventyConfig.addPassthroughCopy("src/android-chrome-192x192.png");
+    eleventyConfig.addPassthroughCopy("src/android-chrome-512-512.png");
+    eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
+    eleventyConfig.addPassthroughCopy("src/favicon-16x16.png");
+    eleventyConfig.addPassthroughCopy("src/favicon-32x32.png");
     eleventyConfig.addPassthroughCopy("src/fonts")
     eleventyConfig.addPassthroughCopy("src/scripts");
     
