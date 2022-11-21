@@ -1,0 +1,21 @@
+.quote {
+	position: relative;
+	text-align: center;
+	padding: var(--space-size-2);
+}
+
+.quote::before, .quote::after {
+	position: absolute;
+	font-size: var(--text-size-3);
+}
+.quote::before {
+	content: "“";
+	top: 0;
+	left: 0;
+}
+
+.quote::after {
+	content: "”";
+	right: 0;
+	bottom: 0;
+}
