@@ -13,7 +13,7 @@ body {
 
 	font-size: var(--text-size-1);
 	font-family: theme('fontFamily.sans');
-	--font-heading: theme('fontFamily.sans');
+	--font-heading: theme('fontFamily.heading');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -98,7 +98,7 @@ h2 {
 
 a, [role="link"] {
     color: inherit;
-    text-decoration-thickness: 0.15rem;
+    text-decoration-thickness: 5%;
     text-underline-offset: 0.3rem;
     text-decoration: none;
 }

@@ -11,11 +11,24 @@
         <link rel="stylesheet" type="text/css" href="/styles/globals.css" />
         <link rel="stylesheet" type="text/css" href="/styles/cube.css" />
 
-        <title>{{ title }}</title>
+        <title>{{ title }} {{ "|" if title }} Lewis Writes Software</title>
     </head>
     <body>
-		<main>
+        <header class="wrapper row-wrap">
+            <a href="/" class="heading">LWS</a>
+            
+            <ul role="list" class="row">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/work">How I work</a></li>
+                <li><a href="/contact">Get in touch</a></li>
+            </ul>
+        </header>
+		<main class="wrapper stack-lg">
 			{{ content | safe }}
 		</main>
+		<footer class="text-center text-base mb-size-0">
+		  <p>Copyright &copy; 2022 Lewis Writes Software</p>
+		  <p>Lewis Writes Software is a trading name of IHD Software Consultancy Ltd</p>
 	</body>
 </html>

@@ -55,7 +55,8 @@ module.exports = {
 			sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
 			mono: defaultTheme.fontFamily.mono,
 			spooky: ['"Creepy Pumkin"', ...defaultTheme.fontFamily.mono],
-			christmas: ['"Christmas"', ...defaultTheme.fontFamily.sans]
+			christmas: ['"Christmas"', ...defaultTheme.fontFamily.sans],
+			heading: ['"Space Grotesk"', '"Inter"', ...defaultTheme.fontFamily.sans]
 		},
 		gap: ({theme}) => ({
 			none: '0px',

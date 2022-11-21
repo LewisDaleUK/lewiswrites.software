@@ -1,10 +1,14 @@
-.row {
+[class*="row"]  {
 	display: flex;
 	flex-direction: row;
 	gap: var(--row-gutter, var(--space-size-2));
 	align-items: center;
 }
 
-.row > * {
+.row-wrap {
+	flex-wrap: wrap;
+}
+
+[class*="row"] > * {
 	flex-grow: 1;
 }

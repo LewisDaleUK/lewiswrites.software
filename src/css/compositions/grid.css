@@ -10,6 +10,10 @@
 	grid-template-columns: 9rem repeat( auto-fill, clamp(10rem,60vw,40rem));
 }
 
+.grid[data-grid="[40 60]"] {
+	grid-template-columns: clamp(15rem, 40%, 20rem) repeat(auto-fill, clamp(15rem, 60%, 20rem));
+}
+
 .grid[data-grid-cols="2"] {
 	--grid-min-item-size: clamp(8rem, 50%, 16rem);
 }
