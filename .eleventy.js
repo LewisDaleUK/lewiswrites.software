@@ -3,6 +3,7 @@ const parseShortDate = (shortDate) => {
     const [month, year] = shortDate.split("/");
     return new Date(parseInt(year), parseInt(month));
 }
+const activityPubPlugin = require('eleventy-plugin-activity-pub');
 
 const defaultSizes = `
     (max-width: 300px) 300px,
@@ -47,7 +48,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
  
-
+    eleventyConfig.addPlugin(activityPubPlugin, {
+        domain: 'lewiswrites.software',
+        username: 'lewis',
+        displayName: 'Lewis Writes Software',
+        summary: 'Hi! I\'m a software engineer from Manchester! This is my website, but discoverable on the Fediverse!',
+    });
     eleventyConfig.addFilter('date', (dateObj) => 
         new Date(dateObj)
             .toLocaleDateString("en-GB", {
@@ -74,7 +80,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter('sortedByDate', (posts) =>
         [...posts].sort((a, b) => (new Date(b.data.date).valueOf()) - (new Date(a.data.date).valueOf()))
     );
-
 
     eleventyConfig.addFilter('filterDrafts', posts => posts.filter(p => !p.data.tags.includes("draft")));
 
