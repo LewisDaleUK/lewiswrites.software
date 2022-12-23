@@ -48,12 +48,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
  
-    eleventyConfig.addPlugin(activityPubPlugin, {
-        domain: 'lewiswrites.software',
-        username: 'lewis',
-        displayName: 'Lewis Writes Software',
-        summary: 'Hi! I\'m a software engineer from Manchester! This is my website, but discoverable on the Fediverse!',
-    });
     eleventyConfig.addFilter('date', (dateObj) => 
         new Date(dateObj)
             .toLocaleDateString("en-GB", {
@@ -126,6 +120,12 @@ module.exports = function(eleventyConfig) {
             }
             return acc;
         }, {});
+    });
+
+    eleventyConfig.addPlugin(activityPubPlugin, {
+        domain: "lewiswrites.software",
+        username: "lewis",
+        displayName: "Lewis Writes Software"
     });
 
     return {
