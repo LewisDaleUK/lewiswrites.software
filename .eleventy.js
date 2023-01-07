@@ -125,7 +125,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(activityPubPlugin, {
         domain: "lewiswrites.software",
         username: "lewis",
-        displayName: "Lewis Writes Software"
+        alias: {
+            username: 'lewisdaleuk',
+            domain: 'dapchat.online'
+        }
     });
 
     return {
